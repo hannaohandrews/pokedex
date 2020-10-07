@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import "./App.css";
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
           <input
             type="text"
             onChange={handleChange}
-            placeholder="Enter name!"
+            placeholder="Show me that Pokemon!"
           />
         </label>
       </form>
@@ -47,7 +48,7 @@ const App = () => {
             <img src={data.sprites["front_default"]} />
             <div className="divTable">
               <div className="divTableBody">
-              <div className="divTableRow">
+                <div className="divTableRow">
                   <div className="divTableCell">Name</div>
                   <div className="divTable">{data.name}</div>
                 </div>
@@ -55,7 +56,7 @@ const App = () => {
                   <div className="divTableCell">Height</div>
                   <div className="divTable">
                     {""}
-                    {Math.round(data.height)}"
+                    {Math.round(data.height)} inches
                   </div>
                 </div>
                 <div className="divTableRow">
@@ -75,11 +76,39 @@ const App = () => {
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">Abilities</div>
-                  <div className="divTable">{data.abilities[0].ability.name}, {data.abilities[1].ability.name}</div>
+                  <div className="divTable">
+                    {data.abilities[0].ability.name},{" "}
+                    {data.abilities[1].ability.name}
+                  </div>
+                </div>
+
+                <div className="divTableRow">
+                  <div className="divTableCell">Base Stats- hp</div>
+                  <div className="divTable">{data.stats[0].base_stat}</div>
                 </div>
                 <div className="divTableRow">
-                  <div className="divTableCell">Base Stats</div>
-                  <div className="divTable">{data.base_experience}</div>
+                  <div className="divTableCell">Base Stats : attack</div>
+                  <div className="divTable">{data.stats[1].base_stat}</div>
+                </div>
+                <div className="divTableRow">
+                  <div className="divTableCell">Base Stats : defense</div>
+                  <div className="divTable">{data.stats[2].base_stat}</div>
+                </div>
+                <div className="divTableRow">
+                  <div className="divTableCell">
+                    Base Stats : special-attack
+                  </div>
+                  <div className="divTable">{data.stats[3].base_stat}</div>
+                </div>
+                <div className="divTableRow">
+                  <div className="divTableCell">
+                    Base Stats: special- defense
+                  </div>
+                  <div className="divTable">{data.stats[4].base_stat}</div>
+                </div>
+                <div className="divTableRow">
+                  <div className="divTableCell">speed</div>
+                  <div className="divTable">{data.stats[5].base_stat}</div>
                 </div>
               </div>
             </div>
