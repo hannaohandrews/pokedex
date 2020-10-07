@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import NavBar from "./components/layout/NavBar";
 
 import "./App.css";
 
@@ -33,6 +34,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <NavBar/>
       <form onSubmit={handleSubmit}>
         <label>
           <input
@@ -45,14 +47,13 @@ const App = () => {
       {pokemonData.map((data) => {
         return (
           <div className="container">
-            <div className ="images">
-            <img src={data.sprites["front_default"]} />
-            <img src={data.sprites["front_default"]} />
+            <div className="images">
+              <img src={data.sprites["front_default"]} />
+              <img src={data.sprites["front_default"]} />
             </div>
             <div className="divTable">
-            <img src={data.sprites["front_default"]} />
+              <img src={data.sprites["front_default"]} />
               <div className="divTableBody">
-             
                 <div className="divTableRow">
                   <div className="divTableCell">Name</div>
                   <div className="divTable">{data.name}</div>
