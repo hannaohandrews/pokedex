@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NavBar from "./components/NavBar.jsx";
+import Button from '@material-ui/core/Button';
 
 import "./App.css";
+import "fontsource-roboto";
+
 
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");
@@ -34,26 +37,25 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar />
+     
       <form onSubmit={handleSubmit}>
         <label>
-          <input
-            type="text"
-            onChange={handleChange}
-            placeholder="Pokemon"
-          />
+          <input type="text" onChange={handleChange} placeholder="Pokemon" />
         </label>
       </form>
+      <Button variant="outlined" color="primary" onClick={handleSubmit}>
+      SEARCH
+      </Button>
+
       {pokemonData.map((data) => {
         return (
           <div className="container">
-
-            <div className="divTable">
-
-              <div className = "main_image">
+            <div className="main_image">
               <img src={data.sprites["front_default"]} />
-              </div>
-            
+            </div>
+
+            <div className="basicInfo">
               <div className="divTableBody">
                 <div className="divTableRow">
                   <div className="divTableCell">Name</div>
@@ -88,39 +90,33 @@ const App = () => {
                     {data.abilities[1].ability.name}
                   </div>
                 </div>
+              </div>
+            </div>
 
-                <div className="divTableRow">
-                  <div className="divTableCell">Base Stats</div>
-                  <div className="divTable"></div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">hp</div>
-                  <div className="divTable">{data.stats[0].base_stat}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell"> attack</div>
-                  <div className="divTable">{data.stats[1].base_stat}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">defense</div>
-                  <div className="divTable">{data.stats[2].base_stat}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">
-                   special-attack
-                  </div>
-                  <div className="divTable">{data.stats[3].base_stat}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">
-                    defense
-                  </div>
-                  <div className="divTable">{data.stats[4].base_stat}</div>
-                </div>
-                <div className="divTableRow">
-                  <div className="divTableCell">speed</div>
-                  <div className="divTable">{data.stats[5].base_stat}</div>
-                </div>
+            <div className="Base_Stats">
+              <div className="divTableRow">
+                <div className="divTableCell">hp</div>
+                <div className="divTable">{data.stats[0].base_stat}</div>
+              </div>
+              <div className="divTableRow">
+                <div className="divTableCell"> attack</div>
+                <div className="divTable">{data.stats[1].base_stat}</div>
+              </div>
+              <div className="divTableRow">
+                <div className="divTableCell">defense</div>
+                <div className="divTable">{data.stats[2].base_stat}</div>
+              </div>
+              <div className="divTableRow">
+                <div className="divTableCell">special-attack</div>
+                <div className="divTable">{data.stats[3].base_stat}</div>
+              </div>
+              <div className="divTableRow">
+                <div className="divTableCell">defense</div>
+                <div className="divTable">{data.stats[4].base_stat}</div>
+              </div>
+              <div className="divTableRow">
+                <div className="divTableCell">speed</div>
+                <div className="divTable">{data.stats[5].base_stat}</div>
               </div>
             </div>
           </div>

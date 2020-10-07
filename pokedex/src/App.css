@@ -2,7 +2,8 @@
   text-align: center;
   padding-bottom:4rem;
   min-height:100vh;
-  font-family: fantasy;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
 }
 
 .navbar{
@@ -30,7 +31,11 @@
   padding:10px;
 }
 
-
+.container{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+}
 
 .App-logo {
   height: 30vmin;
@@ -54,9 +59,6 @@
   color: white;
 }
 
-.App-link {
-  color: yellow;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -65,4 +67,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Base_Stats{
+  padding:50px;
 }
