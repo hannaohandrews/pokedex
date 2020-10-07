@@ -7,10 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 For Pokemon API, I used https://pokeapi.co 
 
-
-![DAYS](https://github.com/hannaohandrews/scheduler/blob/master/docs/days.png?raw=true)
-![STUDENTS](https://github.com/hannaohandrews/scheduler/blob/master/docs/Student_name_error.png?raw=true)
-![EDITING](https://github.com/hannaohandrews/scheduler/blob/master/docs/Edit.png?raw=true)
+![Welcome](https://github.com/hannaohandrews/pokedex/blob/main/images/1.png?raw=true)
+![Eevee](https://github.com/hannaohandrews/pokedex/blob/main/images/2.png?raw=true)
+![Pikachu](https://github.com/hannaohandrews/pokedex/blob/main/images/3.png?raw=true)
 
 ## Available Scripts
 
