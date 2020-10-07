@@ -1,7 +1,11 @@
 .App {
   text-align: center;
+  padding-bottom:4rem;
+  min-height:100vh;
 }
+
 .navbar{
+  height:10vmin;
   background-color: #ef5350 !important;
 }
 

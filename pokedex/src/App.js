@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import NavBar from "./components/layout/NavBar";
+import NavBar from "./components/NavBar";
 
 import "./App.css";
 
@@ -40,7 +40,7 @@ const App = () => {
           <input
             type="text"
             onChange={handleChange}
-            placeholder="Show me that Pokemon!"
+            placeholder="Pokemon"
           />
         </label>
       </form>
