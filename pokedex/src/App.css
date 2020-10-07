@@ -14,7 +14,20 @@
   flex-direction: row;
   align-items:center;
   padding:10px;
+}
+.main_image{
+  padding:100px;
+}
+.Search{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  padding:10px;
+  justify-content: center;
 
+  .button{
+    padding:100px;
+  }
 }
 
 .image{
@@ -32,9 +45,13 @@
 }
 
 .container{
+  border:4px solid navy;
+  border-width:80%;
   display:flex;
   flex-direction:row;
   align-items: center;
+  margin-left:200px;
+  margin-right:200px;
 }
 
 .App-logo {

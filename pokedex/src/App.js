@@ -39,6 +39,7 @@ const App = () => {
     <div className="App">
       <NavBar />
      
+     <div className="Search">
       <form onSubmit={handleSubmit}>
         <label>
           <input type="text" onChange={handleChange} placeholder="Pokemon" />
@@ -47,15 +48,20 @@ const App = () => {
       <Button variant="outlined" color="primary" onClick={handleSubmit}>
       SEARCH
       </Button>
+      </div>
 
       {pokemonData.map((data) => {
         return (
           <div className="container">
             <div className="main_image">
               <img src={data.sprites["front_default"]} />
+              <img src={data.sprites["back_default"]} />
+              <img src={data.sprites["front_female"]} />
+              <img src={data.sprites["back_shiny_female"]} />
             </div>
 
             <div className="basicInfo">
+            <h3>BASIC INFO</h3>
               <div className="divTableBody">
                 <div className="divTableRow">
                   <div className="divTableCell">Name</div>
@@ -94,6 +100,7 @@ const App = () => {
             </div>
 
             <div className="Base_Stats">
+              <h3>BASE STATS</h3>
               <div className="divTableRow">
                 <div className="divTableCell">hp</div>
                 <div className="divTable">{data.stats[0].base_stat}</div>
@@ -118,6 +125,10 @@ const App = () => {
                 <div className="divTableCell">speed</div>
                 <div className="divTable">{data.stats[5].base_stat}</div>
               </div>
+            </div>
+
+            <div>
+
             </div>
           </div>
         );
