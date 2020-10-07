@@ -47,27 +47,35 @@ const App = () => {
             <img src={data.sprites["front_default"]} />
             <div className="divTable">
               <div className="divTableBody">
-                <div className="divTableRow">
-                  <div className="divTableCell">Type</div>
-                  <div className="divTable">{pokemonType}</div>
+              <div className="divTableRow">
+                  <div className="divTableCell">Name</div>
+                  <div className="divTable">{data.name}</div>
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">Height</div>
                   <div className="divTable">
                     {""}
-                    {Math.round(data.height * 3.9)}"
+                    {Math.round(data.height)}"
                   </div>
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">Weight</div>
                   <div className="divTable">
                     {""}
-                    {Math.round(data.weight / 4.3)} lb{" "}
+                    {Math.round(data.weight)} lb{" "}
                   </div>
+                </div>
+                <div className="divTableRow">
+                  <div className="divTableCell">Type</div>
+                  <div className="divTable">{pokemonType}</div>
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">Number of Battle</div>
                   <div className="divTable">{data.game_indices.length}</div>
+                </div>
+                <div className="divTableRow">
+                  <div className="divTableCell">Abilities</div>
+                  <div className="divTable">{data.abilities[0].ability.name}, {data.abilities[1].ability.name}</div>
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">Base Stats</div>
