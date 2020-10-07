@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NavBar from "./components/NavBar.jsx";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button";
 
 import "./App.css";
-import "fontsource-roboto";
-
 
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");
@@ -37,18 +35,20 @@ const App = () => {
 
   return (
     <div className="App">
-      <NavBar />
      
-     <div className="Search">
-      <form onSubmit={handleSubmit}>
-        <label>
-          <input type="text" onChange={handleChange} placeholder="Pokemon" />
-        </label>
-      </form>
-      <Button variant="outlined" color="primary" onClick={handleSubmit}>
-      SEARCH
-      </Button>
+      <NavBar />
+   <h2>Welcome.Please type in your favorite Pokemon.</h2>
+      <div className="Search">
+        <form onSubmit={handleSubmit}>
+          <label>
+            <input type="text" onChange={handleChange} placeholder="Pokemon" />
+          </label>
+        </form>
+        <Button variant="outlined" color="primary" onClick={handleSubmit}>
+          SEARCH
+        </Button>
       </div>
+      
 
       {pokemonData.map((data) => {
         return (
@@ -60,8 +60,9 @@ const App = () => {
               <img src={data.sprites["back_shiny_female"]} />
             </div>
 
-            <div className="basicInfo">
-            <h3>BASIC INFO</h3>
+            <div className="Basic_Info">
+              <h3>BASIC INFO</h3>
+
               <div className="divTableBody">
                 <div className="divTableRow">
                   <div className="divTableCell">Name</div>
@@ -85,15 +86,16 @@ const App = () => {
                   <div className="divTableCell">Type</div>
                   <div className="divTable">{pokemonType}</div>
                 </div>
+
                 <div className="divTableRow">
                   <div className="divTableCell">Number of Battle</div>
                   <div className="divTable">{data.game_indices.length}</div>
                 </div>
+
                 <div className="divTableRow">
                   <div className="divTableCell">Abilities</div>
                   <div className="divTable">
-                    {data.abilities[0].ability.name},{" "}
-                    {data.abilities[1].ability.name}
+                    {data.abilities[0].ability.name}
                   </div>
                 </div>
               </div>
@@ -127,9 +129,7 @@ const App = () => {
               </div>
             </div>
 
-            <div>
-
-            </div>
+            <div></div>
           </div>
         );
       })}

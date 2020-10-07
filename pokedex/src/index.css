@@ -10,6 +10,7 @@
   float:right;
   display:flex;
   align-items:center;
+  padding-left:40px;
 }
 
 .divTableRow{
@@ -25,7 +26,6 @@
 .divTableCell{
   color: #ef5350;
   display: table-cell;
-  padding-left: 3px 10px;
 }
 
 .divTableHead{
