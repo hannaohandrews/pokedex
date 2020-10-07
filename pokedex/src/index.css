@@ -47,3 +47,20 @@
   background-color: aqua;
   justify-content:center;
 }
+
+image{
+  height:14em;
+}
+
+input{
+  box-sizing:border-box;
+  font-size: 2rem;
+  padding: 1rem;
+  display:block;
+  margin: 2rem auto;
+}
+
+body{
+  background-color:honeydew;
+  background-size:140%
+}
