@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import NavBar from "./components/NavBar.jsx";
-import BaseStats from "./components/BaseStats.jsx";
 
 import "./App.css";
 
@@ -89,29 +88,32 @@ const App = () => {
                     {data.abilities[1].ability.name}
                   </div>
                 </div>
-                <BaseStats/>
 
                 <div className="divTableRow">
-                  <div className="divTableCell">Base Stats- hp</div>
+                  <div className="divTableCell">Base Stats</div>
+                  <div className="divTable"></div>
+                </div>
+                <div className="divTableRow">
+                  <div className="divTableCell">hp</div>
                   <div className="divTable">{data.stats[0].base_stat}</div>
                 </div>
                 <div className="divTableRow">
-                  <div className="divTableCell">Base Stats : attack</div>
+                  <div className="divTableCell"> attack</div>
                   <div className="divTable">{data.stats[1].base_stat}</div>
                 </div>
                 <div className="divTableRow">
-                  <div className="divTableCell">Base Stats : defense</div>
+                  <div className="divTableCell">defense</div>
                   <div className="divTable">{data.stats[2].base_stat}</div>
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">
-                    Base Stats : special-attack
+                   special-attack
                   </div>
                   <div className="divTable">{data.stats[3].base_stat}</div>
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">
-                    Base Stats: special- defense
+                    defense
                   </div>
                   <div className="divTable">{data.stats[4].base_stat}</div>
                 </div>
