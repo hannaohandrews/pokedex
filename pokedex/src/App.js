@@ -56,8 +56,6 @@ const App = () => {
             <div className="main_image">
               <img src={data.sprites["front_default"]} />
               <img src={data.sprites["back_default"]} />
-              <img src={data.sprites["front_female"]} />
-              <img src={data.sprites["back_shiny_female"]} />
             </div>
 
             <div className="Basic_Info">
