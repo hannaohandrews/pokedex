@@ -1,7 +1,7 @@
 The Pokédex (ポケモン図鑑 Pokemon Zukan) is an electronic device designed to catalogue and provide information regarding the various species of Pokémon featured in the Pokémon video game, anime and manga series. The name Pokédex is a neologism including "Pokémon" (which itself is a portmanteau of "pocket" and "monster") and "index". The Japanese name is simply "Pokémon Encyclopedia", and it can feature every Pokémon on it, depending on the Pokédex.
 Source: (https://pokemon.fandom.com/wiki/Pokédex) 
 
-This adaptation of Pokédex is a simple application where the user can type in a pokemon's name and find a "card" filled with information about the pokemon. 
+This adaptation of Pokédex is a simple application where the user can type in a pokemon's name and find a "card" filled with information about the pokemon. It can be accessed via https://hannaohandrews.github.io/pokedex/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
