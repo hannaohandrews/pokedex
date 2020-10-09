@@ -4,6 +4,11 @@
   font-size: large;
 }
 
+body{
+  background-color:white;
+  margin:0;
+}
+
 .divTable{
   display:table;
   max-width: 20em;
@@ -66,7 +71,3 @@ input{
   margin: 2rem auto;
 }
 
-body{
-  background-color:white;
-  background-size:140%
-}
