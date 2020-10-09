@@ -12,7 +12,7 @@ export default class NavBar extends Component {
               <ImgComp src={i1} />
             </div>
           </div>
-        </nav>Í
+        </nav>
       </div>
     );
   }
